@@ -2,7 +2,7 @@
  * Given a recipeBook containing recipes, returns the total number of servings in the book
  */
 function countServings(recipeBook) {
-  // code here
+  return recipeBook.recipes.reduce((acc, cur) => acc + cur.servings, 0)
 }
 
 // we've provided a sample object for debugging:

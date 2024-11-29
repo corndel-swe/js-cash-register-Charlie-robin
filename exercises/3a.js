@@ -3,31 +3,30 @@
  * in the array
  */
 function lastRecipe(recipeBook) {
-  const lastTitle = recipeBook.recipes;
-
-  
-
+  return recipeBook.recipes.length > 0
+    ? recipeBook.recipes.at(-1).name
+    : undefined;
 }
 
 // we've provided a sample object for debugging:
 const recipeBook = {
-  title: 'My Recipe Book',
+  title: "My Recipe Book",
   recipes: [
     {
-      name: 'Spaghetti Bolognese',
-      ingredients: ['spaghetti', 'beef', 'tomato sauce'],
+      name: "Spaghetti Bolognese",
+      ingredients: ["spaghetti", "beef", "tomato sauce"],
       servings: 4,
-      isVegetarian: false
+      isVegetarian: false,
     },
 
     {
-      name: 'Vegetable Stir Fry',
-      ingredients: ['broccoli', 'carrots', 'bell peppers', 'soy sauce'],
+      name: "Vegetable Stir Fry",
+      ingredients: ["broccoli", "carrots", "bell peppers", "soy sauce"],
       servings: 2,
-      isVegetarian: true
-    }
-  ]
-}
+      isVegetarian: true,
+    },
+  ],
+};
 
 // don't change below
-export default lastRecipe
+export default lastRecipe;
