@@ -2,7 +2,10 @@
  * Given a list of recipes, return the number of vegetarian recipes in the list
  */
 function countVeggies(recipes) {
-  // code here
+  
+ const vegetarianCount = recipes.filter(recipe => recipe.isVegetarian).length;
+
+ return vegetarianCount;
 }
 
 // array provided for debugging:

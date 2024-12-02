@@ -3,25 +3,35 @@
  * the name of each recipe
  */
 function listNames(recipes) {
-  // code here
+  const names = recipes.map((recipe) => {
+    console.log("---")
+    console.log(recipe.name)
+    return recipe.name;
+  });
+
+  return names;
 }
 
 // array provided for debugging:
 const recipes = [
   {
-    name: 'Spaghetti Bolognese',
-    ingredients: ['spaghetti', 'beef', 'tomato sauce'],
+    name: "Spaghetti Bolognese",
+    ingredients: ["spaghetti", "beef", "tomato sauce"],
     servings: 4,
-    isVegetarian: false
+    isVegetarian: false,
   },
 
   {
-    name: 'Vegetable Stir Fry',
-    ingredients: ['broccoli', 'carrots', 'bell peppers', 'soy sauce'],
+    name: "Vegetable Stir Fry",
+    ingredients: ["broccoli", "carrots", "bell peppers", "soy sauce"],
     servings: 2,
-    isVegetarian: true
-  }
-]
+    isVegetarian: true,
+  },
+];
+
+const result = listNames(recipes);
+
+console.log(result);
 
 // don't change below
-export default listNames
+export default listNames;
